@@ -1,0 +1,6 @@
+properties:
+  $ref: '#/definitions/Story'
+  detail_url:
+    description: 案件 show 頁面連結
+    type: string
+    example: https://api.jrf.org.tw/ULD/%E5%88%91%E4%BA%8B-105-%E4%BA%A4%E6%98%93-458

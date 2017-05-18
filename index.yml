@@ -1,0 +1,51 @@
+swagger: '2.0'
+info:
+  title: '司法陽光網判決API'
+  version: '0.1'
+host: 'api.jrf.org.tw'
+basePath: '/'
+schemes:
+  - 'https'
+consumes:
+  - 'application/json'
+produces:
+  - 'application/json'
+paths:
+  /{court_code}/{story_identity}:
+    $ref: 'paths/story.yml'
+  /{court_code}/{story_identity}/verdict:
+      $ref: 'paths/verdict.yml'
+  /{court_code}/{story_identity}/rules:
+      $ref: 'paths/rules.yml'
+  /{court_code}/{story_identity}/schedules:
+      $ref: 'paths/schedules.yml'
+  /search/stories:
+    $ref: 'paths/stories.yml'
+definitions:
+  court:
+    $ref: 'definitions/court.yml'
+  error:
+    $ref: 'definitions/error.yml'
+  identity:
+    $ref: 'definitions/identity.yml'
+  pagination_response:
+    $ref: 'definitions/pagination_response.yml'
+  rule:
+    $ref: 'definitions/rule.yml'
+  schedule:
+    $ref: 'definitions/schedule.yml'
+  story:
+    $ref: 'definitions/story.yml'
+  story_index:
+    $ref: 'definitions/story_index.yml'
+  story_partial:
+    $ref: 'definitions/story_partial.yml'
+  story_show:
+    $ref: 'definitions/story_show.yml'
+  vedrict:
+    $ref: 'definitions/vedrict.yml'
+parameters:
+  court_code:
+    $ref: 'parameters/court_code.yml'
+  story_identity:
+    $ref: 'parameters/story_identity.yml'

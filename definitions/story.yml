@@ -1,0 +1,43 @@
+type: 'object'
+properties:
+  identity: 
+    $ref: '#/definitions/identity'
+  reason:
+    description: 案由
+    type: string
+  adjudged_on:
+    description: 判決日期
+    type: date-only
+  pronounced_on:
+    description: 宣判日期
+    type: date-only
+  judges_names:
+    description: 相關法官姓名
+    type: array
+    item:
+      type: string
+  prosecutor_names:
+    description: 相關檢察官姓名
+    type: array
+    item:
+      type: string
+  lawyer_names:
+    description: 相關律師姓名
+    type: array
+    item:
+      type: string
+  party_names:
+    description: 相關當事人姓名
+    type: array
+    item:
+      type: string
+example:
+  identity:
+  reason: 保護管束
+  adjudged_on: 2017-03-27
+  pronounced_on: 2017-03-30
+  judges_names: ['盧江陽', '黃玉清', '楊熾光']
+  prosecutor_names: ["張蘭"]
+  lawyer_names: ['林佳瑩', '張志朋', '吳展旭']
+  party_names: ["李文財"]
+

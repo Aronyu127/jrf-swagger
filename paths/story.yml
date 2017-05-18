@@ -1,0 +1,21 @@
+get:
+  summary: 'Show story'
+  description: Retrieve a specific story
+  parameters:
+    - 
+      court_code:
+        $ref: '#/parameters/court_code'
+    - 
+      story_identity:
+        $ref: '#/parameters/story_identity'
+  responses:
+    '200':
+      description: 'Get specific story data'
+      schema:
+        properties:
+          story:
+            $ref: '#/definitions/story_show'
+    '404':
+      schema:
+        properties:
+          $ref: '#/definitions/error'

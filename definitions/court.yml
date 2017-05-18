@@ -1,0 +1,11 @@
+type: 'object'
+properties: 
+  name:
+    description: 法院全名
+    type: string
+  code:
+    description: 法院代碼
+    type: string
+exapmle:
+  name: 臺灣雲林地方法院
+  code: ULD

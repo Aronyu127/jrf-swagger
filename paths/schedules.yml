@@ -1,0 +1,22 @@
+get:
+  description: Retrieve a schedules list of story
+  parameters:
+    - 
+      court_code:
+        $ref: '#/parameters/court_code'
+    - 
+      story_identity:
+        $ref: '#/parameters/story_identity'
+  responses:
+    '200':
+      schema:
+        properties:
+          schedules:
+            type: array
+            items:
+              $ref: '#/definition/Schedule'
+    '404':
+      schema:
+        properties:
+          message:
+            $ref: '#/definitions/error'

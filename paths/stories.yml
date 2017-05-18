@@ -1,0 +1,81 @@
+get:
+  description: Get a list of stories based on given condition
+  parameters:
+    - 
+      name: page
+      description: Specify the page that you want to retrieve
+      type: integer
+      in: query
+      require: false
+    - 
+      name: q[story_type]
+      description: 案件類別
+      require: false
+      type: string
+      in: query
+      x-example: 民事
+      
+    -
+      name: q[year]?
+      description: 案件年份 民國年
+      type: number
+      require: false
+      x-example: 105
+      in: query
+    -
+      name: q[word]?
+      description: 案件字別
+      type: string
+      require: false
+      x-example: 重上
+      in: query
+    -
+      name: q[number]?
+      description: 案件案號
+      type: number
+      require: false
+      x-example: 608
+      in: query
+    -
+      name: q[lawyer_names_cont]?
+      description: 相關律師姓名包含
+      type: string
+      require: false
+      x-example: 謝
+      in: query
+    -
+      name: q[judges_names_cont]?
+      description: 相關法官姓名包含
+      type: string
+      require: false
+      x-example: 張靜
+      in: query
+    -
+      name: q[adjudged_on_gteq]?
+      description: 判決日期晚於
+      type: string
+      require: false
+      x-example: 2009-12-01
+      in: query
+    -
+      name: q[adjudged_on_lteq]?
+      description: 判決日期早於
+      type: string
+      require: false
+      x-example: 2017-04-20
+      in: query
+  responses:
+    '200':
+      schema:
+        properties:
+          pagination:
+            $ref: '#/definitions/pagination_response'
+          stories:
+            type: array
+            item:
+              $ref: '#/definitions/story_index'
+    '404':
+      schema:
+        properties:
+          message:
+            $ref: '#/definitions/error'

@@ -1,0 +1,27 @@
+type: 'object'
+properties:
+  current:
+    description: 目前頁數
+    type: number
+  previous_url?:
+    description: 上一頁連結
+    type: string
+  next_url:
+    description: 下一頁連結
+    type: string
+  per_page:
+    description: 每頁筆數
+    type: number
+  pages:
+    description: 總頁數
+    type: number
+  count:
+    description: 總筆數
+    type: number
+example:
+  current: 1
+  previous_url?: 'https://api.jrf.org.tw/search/stories?page=2&q%5Badjudge_date_gteq%5D=2009-12-27'
+  next_url: https://api.jrf.org.tw/search/stories?page=3&q%5Badjudge_date_gteq%5D=2009-12-27'
+  per_page: 20
+  pages: 16738
+  count: 334757

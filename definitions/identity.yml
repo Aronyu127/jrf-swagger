@@ -1,0 +1,23 @@
+type: 'object'
+properties:
+  type:
+    description: 案件類別
+    type: string
+    example: 民事
+  year:
+    description: 案件年份 民國年
+    type: number
+    example: 105
+  word:
+    description: 案件字別
+    type: string
+    example: 重上
+  number:
+    description: 案件案號
+    type: number
+    example: 608
+example:
+  type: 民事
+  year: 105
+  word: 重上
+  number: 608

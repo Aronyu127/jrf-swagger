@@ -1,0 +1,26 @@
+get:
+  description: Retrieve a rules list of story
+    parameters:
+      - 
+        court_code:
+          $ref: '#/parameters/court_code'
+      - 
+        story_identity:
+          $ref: '#/parameters/story_identity'
+  responses:
+    '200':
+      schema:
+        properties:
+          story:
+            $ref: '#/definitions/Story'
+          court:
+            $ref: '#/definitions/Court'
+          rules:
+            type: array
+            items:
+              $ref: '#/definitions/Rule'
+    '404':
+      schema:
+        properties:
+          message:
+            $ref: '#/definitions/error'

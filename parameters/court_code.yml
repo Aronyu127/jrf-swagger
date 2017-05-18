@@ -1,0 +1,7 @@
+name: court_code
+in: path
+description: 法院代號
+require: true
+type: string
+x-pattern: \w{3}
+x-example: KSB

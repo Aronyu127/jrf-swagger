@@ -1,0 +1,4 @@
+properties:
+  $ref: '#definitions/story_partial'
+  court:
+    $ref: '#/definitions/Court'
