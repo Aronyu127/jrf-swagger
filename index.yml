@@ -14,15 +14,15 @@ paths:
   /{court_code}/{story_identity}:
     $ref: 'paths/story.yml'
   /{court_code}/{story_identity}/verdict:
-      $ref: 'paths/verdict.yml'
+    $ref: 'paths/verdict.yml'
   /{court_code}/{story_identity}/rules:
-      $ref: 'paths/rules.yml'
+    $ref: 'paths/rules.yml'
   /{court_code}/{story_identity}/schedules:
-      $ref: 'paths/schedules.yml'
+    $ref: 'paths/schedules.yml'
   /search/stories:
     $ref: 'paths/stories.yml'
 definitions:
-  court:
+  Court:
     $ref: 'definitions/court.yml'
   error:
     $ref: 'definitions/error.yml'
@@ -30,11 +30,11 @@ definitions:
     $ref: 'definitions/identity.yml'
   pagination_response:
     $ref: 'definitions/pagination_response.yml'
-  rule:
+  Rule:
     $ref: 'definitions/rule.yml'
-  schedule:
+  Schedule:
     $ref: 'definitions/schedule.yml'
-  story:
+  Story:
     $ref: 'definitions/story.yml'
   story_index:
     $ref: 'definitions/story_index.yml'
@@ -42,7 +42,7 @@ definitions:
     $ref: 'definitions/story_partial.yml'
   story_show:
     $ref: 'definitions/story_show.yml'
-  vedrict:
+  Vedrict:
     $ref: 'definitions/vedrict.yml'
 parameters:
   court_code:
