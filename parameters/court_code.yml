@@ -1,6 +1,6 @@
 name: court_code
 in: path
-description: 法院代號
+description: "法院代號 ex: KSB"
 require: true
 type: string
 x-pattern: \w{3}
