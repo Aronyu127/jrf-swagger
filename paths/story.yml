@@ -2,10 +2,8 @@ get:
   summary: 'Show story'
   description: Retrieve a specific story
   parameters:
-    - 
-      $ref: '#/parameters/court_code'
-    - 
-      $ref: '#/parameters/story_identity'
+    - $ref: '#/parameters/court_code'
+    - $ref: '#/parameters/story_identity'
   responses:
     '200':
       description: 'Get specific story data'

@@ -1,12 +1,8 @@
 get:
   description: Retrieve a schedules list of story
   parameters:
-    - 
-      court_code:
-        $ref: '#/parameters/court_code'
-    - 
-      story_identity:
-        $ref: '#/parameters/story_identity'
+    - $ref: '#/parameters/court_code'
+    - $ref: '#/parameters/story_identity'
   responses:
     '200':
       schema:
