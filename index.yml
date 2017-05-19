@@ -46,6 +46,16 @@ definitions:
     $ref: 'definitions/verdict.yml'
 parameters:
   court_code:
-    $ref: 'parameters/court_code.yml'
+    name: court_code
+    in: path
+    description: "法院代號 ex: KSB"
+    require: true
+    type: string
+    x-pattern: \w{3}
   story_identity:
-    $ref: 'parameters/story_identity.yml'
+    name: story_identity
+    in: path
+    description: "案件識別碼 {story_type}-{story_year}-{story_word}-{story_number} ex: 行政-104-訴-157"
+    require: true
+    type: string
+    x-pattern: .*-\d{2,3}-.+-\d+
