@@ -42,8 +42,8 @@ definitions:
     $ref: 'definitions/story_partial.yml'
   story_show:
     $ref: 'definitions/story_show.yml'
-  Vedrict:
-    $ref: 'definitions/vedrict.yml'
+  Verdict:
+    $ref: 'definitions/verdict.yml'
 parameters:
   court_code:
     $ref: 'parameters/court_code.yml'
