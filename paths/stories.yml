@@ -9,60 +9,52 @@ get:
       require: false
     - 
       name: q[story_type]
-      description: 案件類別
+      description: "案件類別 ex: 民事"
       require: false
       type: string
       in: query
-      x-example: 民事
       
     -
       name: q[year]
-      description: 案件年份 民國年
+      description: "案件年份 民國年 ex: 105"
       type: number
       require: false
-      x-example: 105
       in: query
     -
       name: q[word]
-      description: 案件字別
+      description: "案件字別 ex: 重上"
       type: string
       require: false
-      x-example: 重上
       in: query
     -
       name: q[number]
-      description: 案件案號
+      description: "案件案號 ex: 608"
       type: number
       require: false
-      x-example: 608
       in: query
     -
       name: q[lawyer_names_cont]
-      description: 相關律師姓名包含
+      description: "相關律師姓名包含 ex: 謝"
       type: string
       require: false
-      x-example: 謝
       in: query
     -
       name: q[judges_names_cont]
-      description: 相關法官姓名包含
+      description: "相關法官姓名包含 ex: 張靜"
       type: string
       require: false
-      x-example: 張靜
       in: query
     -
       name: q[adjudged_on_gteq]
-      description: 判決日期晚於
+      description: "判決日期晚於 ex: 2009-12-01"
       type: string
       require: false
-      x-example: 2009-12-01
       in: query
     -
       name: q[adjudged_on_lteq]
-      description: 判決日期早於
+      description: "判決日期早於 ex: 2017-04-20"
       type: string
       require: false
-      x-example: 2017-04-20
       in: query
   responses:
     '200':
