@@ -1,8 +1,8 @@
 properties:
   story: 
-    $ref: '#definitions/Story'
+    $ref: '#/definitions/Story'
   court: 
-    $ref: '#definitions/Court'
+    $ref: '#/definitions/Court'
   branch_name:
     description: 股別名稱
     type: string
