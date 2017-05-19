@@ -1,8 +1,22 @@
 get:
   description: Retrieve a specific verdict of story
   parameters:
-    - $ref: '#/parameters/court_code'
-    - $ref: '#/parameters/story_identity'
+    - 
+      name: court_code
+      in: path
+      description: 法院代號
+      require: true
+      type: string
+      x-pattern: \w{3}
+      x-example: KSB
+    - 
+      name: story_identity
+      in: path
+      description: 案件識別碼 {story_type}-{story_year}-{story_word}-{story_number}
+      require: true
+      type: string
+      x-pattern: .*-\d{2,3}-.+-\d+
+      x-example: 行政-104-訴-157
   responses:
     '200':
       schema:
