@@ -1,12 +1,10 @@
 get:
   description: Retrieve a rules list of story
-    parameters:
-      - 
-        court_code:
-          $ref: '#/parameters/court_code'
-      - 
-        story_identity:
-          $ref: '#/parameters/story_identity'
+  parameters:
+    - 
+      $ref: '#/parameters/court_code'
+    - 
+      $ref: '#/parameters/story_identity'
   responses:
     '200':
       schema:
